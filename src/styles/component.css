@@ -1,0 +1,70 @@
+/* Shared branded components for the Field Management System — Field Atlas palette */
+
+.settings-tabs .ant-tabs-nav {
+    margin-bottom: 24px;
+}
+.settings-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #0e8a86;
+    font-weight: 600;
+}
+.settings-tabs .ant-tabs-ink-bar {
+    background-color: #0e8a86;
+}
+
+/* Brand surface card */
+.brand-card {
+    background: #ffffff;
+    border: 1px solid #e5e9f0;
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgba(10, 20, 36, 0.04), 0 8px 24px -18px rgba(10, 20, 36, 0.25);
+}
+.brand-card__header {
+    border-bottom: 1px solid #eef1f7;
+    padding: 18px 22px;
+}
+.brand-card__body {
+    padding: 22px;
+}
+
+/* Brand gradient header band */
+.brand-band {
+    background: linear-gradient(135deg, #0a1424 0%, #101c33 55%, #172a4e 130%);
+    color: #ffffff;
+}
+.brand-band--teal {
+    background: linear-gradient(135deg, #0a4b54 0%, #0e8a86 55%, #0fb5ae 130%);
+}
+
+/* Brand button */
+.btn-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #0e8a86, #0fb5ae);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 18px -10px rgba(15, 181, 174, 0.65);
+}
+.btn-brand:hover {
+    filter: brightness(1.05);
+    box-shadow: 0 12px 24px -10px rgba(15, 181, 174, 0.7);
+}
+.btn-brand:active {
+    transform: translateY(1px);
+}
+.btn-brand--teal {
+    background: #0e8a86;
+}
+.btn-brand--teal:hover {
+    background: #0a6770;
+}
+.btn-brand:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
