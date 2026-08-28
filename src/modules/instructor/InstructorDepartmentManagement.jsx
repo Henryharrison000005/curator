@@ -166,7 +166,7 @@ const InstructorDepartmentManagement = () => {
       key: "full_name",
       sorter: (a, b) => a.full_name.localeCompare(b.full_name),
       render: (text) => (
-        <span className="font-medium text-[#9a938a]">{text}</span>
+        <span className="font-medium text-[#7a756d]">{text}</span>
       ),
     },
     {
@@ -209,20 +209,20 @@ const InstructorDepartmentManagement = () => {
       <Card
         title={
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#ccff00]/[0.08] text-[#ccff00] ring-1 ring-[#ccff00]/20">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#c4622d]/[0.06] text-[#c4622d] ring-1 ring-[#c4622d]/20">
               <TeamOutlined className="text-xl" />
             </div>
             <div>
-              <h1 className="font-display text-xl md:text-2xl font-bold text-[#f5f0e8] tracking-tight">
+              <h1 className="font-display text-xl md:text-2xl font-bold text-[#2d2a24] tracking-tight">
                 Student Department &amp; Supervisor Management
               </h1>
-              <p className="font-mono-label text-[11px] text-[#6b6560] mt-1 uppercase tracking-wide">
+              <p className="font-mono-label text-[11px] text-[#a6a199] mt-1 uppercase tracking-wide">
                 Manage assignments · {instructorName}
               </p>
             </div>
           </div>
         }
-        className="shadow-[0_12px_30px_-12px_rgba(0,0,0,0.5)]"
+        className="shadow-[0_12px_30px_-12px_rgba(45,42,36,0.08)]"
         extra={
           <Button type="default" onClick={loadStudents}>
             Refresh
@@ -289,7 +289,7 @@ const InstructorDepartmentManagement = () => {
               disabled
               value={form.getFieldValue("full_name")}
               prefix={<UserOutlined />}
-              className="bg-[#0e0e0e]"
+              className="bg-[#f4f1ec]"
             />
           </Form.Item>
 

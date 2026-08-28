@@ -1,80 +1,72 @@
-/* Shared branded components — Surveyor's Instrument dark mode */
+/* Shared branded components — Field Station warm editorial */
 
 .settings-tabs .ant-tabs-nav {
     margin-bottom: 24px;
 }
 .settings-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
-    color: #ccff00;
+    color: #c4622d;
     font-weight: 600;
 }
 .settings-tabs .ant-tabs-ink-bar {
-    background-color: #ccff00;
+    background-color: #c4622d;
 }
 .settings-tabs .ant-tabs-tab {
-    color: #9a938a;
+    color: #7a756d;
 }
 .settings-tabs .ant-tabs-tab:hover {
-    color: #f5f0e8;
+    color: #2d2a24;
 }
 
-/* Brand surface card */
 .brand-card {
-    background: #141414;
-    border: 2px solid #2a2a2a;
-    border-radius: 4px;
-    transition: border-color 0.3s ease;
+    background: #ffffff;
+    border: 1px solid #e5e0d8;
+    transition: border-color 0.25s ease;
 }
 .brand-card:hover {
-    border-color: #3a3a3a;
+    border-color: #d4cfc6;
 }
 .brand-card__header {
-    border-bottom: 1px solid #2a2a2a;
+    border-bottom: 1px solid #e5e0d8;
     padding: 18px 22px;
 }
 .brand-card__body {
     padding: 22px;
 }
 
-/* Brand gradient header band */
 .brand-band {
-    background: linear-gradient(135deg, #0a0a0a 0%, #141414 55%, #1e1e1e 130%);
-    color: #f5f0e8;
+    background: linear-gradient(135deg, #2d2a24 0%, #3d3a33 100%);
+    color: #faf7f2;
 }
 .brand-band--teal {
-    background: linear-gradient(135deg, #1a2a00 0%, #2a4000 55%, #3a5500 130%);
+    background: linear-gradient(135deg, #a85225 0%, #c4622d 100%);
 }
 
-/* Brand button — chartreuse */
 .btn-brand {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #ccff00;
-    color: #0a0a0a;
+    background: #c4622d;
+    color: #ffffff;
     border: none;
-    border-radius: 2px;
     padding: 10px 18px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
-    letter-spacing: 0.02em;
     cursor: pointer;
-    transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.25s ease;
-    box-shadow: 0 12px 28px -10px rgba(204, 255, 0, 0.35);
+    transition: background 0.15s ease, transform 0.1s ease;
 }
 .btn-brand:hover {
-    background: #b8e600;
-    box-shadow: 0 16px 36px -10px rgba(204, 255, 0, 0.45);
+    background: #a85225;
 }
 .btn-brand:active {
     transform: translateY(1px);
 }
 .btn-brand--teal {
-    background: #b8e600;
+    background: #a85225;
 }
 .btn-brand--teal:hover {
-    background: #a3cc00;
+    background: #8e4420;
 }
 .btn-brand:disabled {
-    opacity: 0.4;
+    opacity: 0.5;
     cursor: not-allowed;
 }

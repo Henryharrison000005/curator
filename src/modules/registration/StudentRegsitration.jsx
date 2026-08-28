@@ -87,26 +87,26 @@ export default function StudentRegistration() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-[#0a0a0a] flex relative overflow-hidden">
+      <div className="min-h-screen bg-[#faf7f2] flex relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 crosshair" />
-        <div className="pointer-events-none absolute -top-32 right-0 h-[24rem] w-[24rem] rounded-full bg-[#ccff00]/[0.04] blur-[120px]" />
+        <div className="pointer-events-none absolute -top-32 right-0 h-[24rem] w-[24rem] rounded-full bg-[#c4622d]/[0.04] blur-[120px]" />
         <div className="relative z-10 m-auto w-full max-w-lg text-center px-6">
           <div className="fms-card px-10 py-12">
             <div className="mb-5 flex flex-col items-center">
-              <div className="flex h-20 w-20 items-center justify-center bg-[#ccff00] mb-5">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="flex h-16 w-16 items-center justify-center bg-[#5a8a3c] mb-5">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 6L9 17l-5-5"/>
                 </svg>
               </div>
-              <p className="font-mono-label text-[10px] text-[#ccff00] uppercase tracking-[0.28em] mb-2">
+              <p className="font-mono-label text-[10px] text-[#5a8a3c] uppercase tracking-[0.2em] mb-2">
                 Received · Pending approval
               </p>
-              <h1 className="font-display font-black text-3xl text-[#f5f0e8] tracking-tight mb-2">
+              <h1 className="font-display font-black text-3xl text-[#2d2a24] tracking-tight mb-2">
                 Application Submitted
               </h1>
-              <p className="text-base text-[#9a938a] leading-relaxed max-w-sm">
+              <p className="text-base text-[#7a756d] leading-relaxed max-w-sm">
                 Your field application has been received and is now{" "}
-                <span className="font-semibold text-[#f5f0e8]">pending instructor approval</span>.
+                <span className="font-semibold text-[#2d2a24]">pending instructor approval</span>.
                 You will be able to sign in once the instructor accepts your application
                 and activates your account.
               </p>
@@ -115,7 +115,7 @@ export default function StudentRegistration() {
               Go to Login
             </button>
           </div>
-          <div className="mt-7 font-mono-label text-[10px] text-[#3a3a3a] uppercase tracking-[0.2em]">
+          <div className="mt-7 font-mono-label text-[10px] text-[#a6a199] uppercase tracking-[0.16em]">
             &copy; {new Date().getFullYear()} Field Management System
           </div>
         </div>
@@ -124,23 +124,23 @@ export default function StudentRegistration() {
   }
 
   const inputClass =
-    "w-full border-2 border-[#2a2a2a] bg-[#0e0e0e] rounded-none px-4 py-3 text-[#f5f0e8] focus:outline-none focus:border-[#ccff00] transition-colors placeholder:text-[#3a3a3a] font-medium";
-  const labelClass = "block font-mono-label text-[10px] font-semibold text-[#9a938a] mb-2 uppercase tracking-[0.16em]";
+    "w-full border border-[#e5e0d8] bg-[#faf7f2] px-4 py-3 text-[#2d2a24] focus:outline-none focus:border-[#c4622d] focus:ring-1 focus:ring-[#c4622d]/20 transition-colors placeholder:text-[#a6a199]";
+  const labelClass = "block font-mono-label text-[10px] font-semibold text-[#7a756d] mb-2 uppercase tracking-[0.12em]";
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] flex relative overflow-hidden">
+    <div className="min-h-screen bg-[#faf7f2] flex relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 crosshair" />
-      <div className="pointer-events-none absolute -top-32 right-0 h-[24rem] w-[24rem] rounded-full bg-[#ccff00]/[0.04] blur-[120px]" />
-      <div className="pointer-events-none absolute bottom-0 left-0 h-72 w-72 rounded-full bg-[#ff4d4d]/[0.03] blur-[120px]" />
+      <div className="pointer-events-none absolute -top-32 right-0 h-[24rem] w-[24rem] rounded-full bg-[#c4622d]/[0.04] blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 left-0 h-72 w-72 rounded-full bg-[#c49a2d]/[0.03] blur-[120px]" />
       <div className="relative z-10 w-full max-w-lg my-auto px-6 py-10">
         <div className="fms-card px-8 py-9">
           <div className="mb-6 flex flex-col items-center">
-            <div className="relative mb-4 flex h-14 w-14 items-center justify-center bg-[#ccff00] text-[#0a0a0a] font-display font-black text-2xl border-2 border-[#ccff00]">
+            <div className="relative mb-4 flex h-12 w-12 items-center justify-center bg-[#c4622d] text-white font-display font-bold text-xl">
               F
-              <span className="absolute -bottom-1.5 -right-1.5 h-3 w-3 rounded-full bg-[#ccff00] ring-2 ring-[#141414]" />
+              <span className="absolute -bottom-1 -right-1 h-2.5 w-2.5 rounded-full bg-[#5a8a3c] ring-2 ring-white" />
             </div>
-            <h1 className="font-display font-black text-2xl text-[#f5f0e8] tracking-tight mb-1">Field Management System</h1>
-            <p className="font-mono-label text-[10px] text-[#ccff00] uppercase tracking-[0.24em]">Field Application</p>
+            <h1 className="font-display font-black text-xl text-[#2d2a24] tracking-tight mb-1">Field Management System</h1>
+            <p className="font-mono-label text-[10px] text-[#c4622d] uppercase tracking-[0.2em]">Field Application</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4 w-full">
@@ -214,27 +214,27 @@ export default function StudentRegistration() {
             </div>
 
             {displayError && (
-              <p className="text-[#ff4d4d] text-sm text-center font-medium">{displayError}</p>
+              <p className="text-[#b83a2a] text-sm text-center font-medium">{displayError}</p>
             )}
 
             <button
               disabled={loginStatus === "loading"}
               type="submit"
-              className={`w-full btn-fms justify-center text-base ${loginStatus === "loading" ? "opacity-40 cursor-not-allowed" : ""}`}
+              className={`w-full btn-fms justify-center text-base ${loginStatus === "loading" ? "opacity-50 cursor-not-allowed" : ""}`}
             >
               {loginStatus === "loading" ? "Submitting application..." : "Submit Application"}
             </button>
           </form>
 
-          <p className="mt-6 text-sm text-[#6b6560] text-center">
+          <p className="mt-6 text-sm text-[#7a756d] text-center">
             Already have an account?{" "}
-            <Link to="/Login" className="font-bold text-[#ccff00] hover:text-[#b8e600] transition-colors">
+            <Link to="/Login" className="font-semibold text-[#c4622d] hover:text-[#a85225] transition-colors">
               Log in
             </Link>
           </p>
         </div>
 
-        <div className="mt-7 text-center font-mono-label text-[10px] text-[#3a3a3a] uppercase tracking-[0.2em]">
+        <div className="mt-7 text-center font-mono-label text-[10px] text-[#a6a199] uppercase tracking-[0.16em]">
           &copy; {new Date().getFullYear()} Field Management System
         </div>
       </div>

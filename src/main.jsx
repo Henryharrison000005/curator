@@ -4,98 +4,92 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { ConfigProvider, theme } from "antd";
+import { ConfigProvider } from "antd";
 import { store } from "./store/store.js";
 
-const accent = "#ccff00";
-const darkBg = "#0a0a0a";
-const darkSurface = "#141414";
-const darkSurface2 = "#1e1e1e";
-const darkBorder = "#2a2a2a";
-const cream = "#f5f0e8";
-const muted = "#9a938a";
+const accent = "#c4622d";
+const warmBg = "#faf7f2";
+const warmSurface = "#ffffff";
+const warmSurface2 = "#f4f1ec";
+const warmBorder = "#e5e0d8";
+const warmBorder2 = "#d4cfc6";
+const espresso = "#2d2a24";
+const muted = "#7a756d";
 
 const antdTheme = {
-  algorithm: theme.darkAlgorithm,
   token: {
     colorPrimary: accent,
     colorInfo: accent,
-    colorSuccess: "#4ade80",
-    colorWarning: "#f5a524",
-    colorError: "#ff4d4d",
+    colorSuccess: "#5a8a3c",
+    colorWarning: "#c49a2d",
+    colorError: "#b83a2a",
     colorLink: accent,
-    colorText: cream,
+    colorText: espresso,
     colorTextSecondary: muted,
-    colorBgContainer: darkSurface,
-    colorBgElevated: darkSurface2,
-    colorBgLayout: darkBg,
-    colorBorder: darkBorder,
-    colorBorderSecondary: darkBorder,
-    borderRadius: 2,
-    fontFamily: '"Archivo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif',
+    colorBgContainer: warmSurface,
+    colorBgElevated: warmSurface,
+    colorBgLayout: warmBg,
+    colorBorder: warmBorder,
+    colorBorderSecondary: warmBorder,
+    borderRadius: 3,
+    fontFamily: '"DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif',
     fontSize: 14,
     controlHeight: 36,
-    wireframe: true,
   },
   components: {
     Button: {
       colorPrimary: accent,
-      colorPrimaryHover: "#b8e600",
-      algorithm: true,
+      colorPrimaryHover: "#a85225",
       fontWeight: 600,
-      defaultBg: darkSurface2,
-      defaultBorderColor: "#3a3a3a",
-      defaultColor: cream,
+      defaultBg: warmSurface,
+      defaultBorderColor: warmBorder,
+      defaultColor: espresso,
     },
     Table: {
-      colorBgContainer: darkSurface,
-      headerBg: darkSurface2,
-      headerColor: cream,
-      headerSplitColor: darkBorder,
-      rowHoverBg: darkSurface2,
-      borderColor: darkBorder,
-      colorText: cream,
+      colorBgContainer: warmSurface,
+      headerBg: warmSurface2,
+      headerColor: espresso,
+      headerSplitColor: warmBorder,
+      rowHoverBg: warmSurface2,
+      borderColor: warmBorder,
+      colorText: espresso,
     },
     Tabs: {
       inkBarColor: accent,
       itemSelectedColor: accent,
-      itemHoverColor: "#f5f0e8",
+      itemHoverColor: espresso,
       itemColor: muted,
-      cardBg: darkSurface,
     },
     Card: {
-      colorBgContainer: darkSurface,
-      colorBorderSecondary: darkBorder,
+      colorBgContainer: warmSurface,
+      colorBorderSecondary: warmBorder,
     },
     Modal: {
-      contentBg: darkSurface,
-      headerBg: darkSurface,
-      titleColor: cream,
+      contentBg: warmSurface,
+      headerBg: warmSurface,
+      titleColor: espresso,
     },
     Input: {
-      colorBgContainer: darkSurface2,
-      colorBorder: darkBorder,
+      colorBgContainer: warmSurface,
+      colorBorder: warmBorder,
       activeBorderColor: accent,
-      hoverBorderColor: "#3a3a3a",
-      colorText: cream,
-      colorTextPlaceholder: "#6b6560",
+      hoverBorderColor: warmBorder2,
+      colorText: espresso,
+      colorTextPlaceholder: "#a6a199",
     },
     Select: {
-      colorBgContainer: darkSurface2,
-      colorBorder: darkBorder,
-      optionSelectedBg: darkSurface2,
-      optionActiveBg: darkSurface2,
+      colorBgContainer: warmSurface,
+      colorBorder: warmBorder,
+      optionSelectedBg: warmSurface2,
+      optionActiveBg: warmSurface2,
     },
     Tag: {
-      colorBgContainer: darkSurface2,
+      colorBgContainer: warmSurface2,
     },
     Descriptions: {
-      colorBgContainer: darkSurface,
+      colorBgContainer: warmSurface,
       labelColor: muted,
-      colorText: cream,
-    },
-    Message: {
-      contentBg: darkSurface,
+      colorText: espresso,
     },
   },
 };

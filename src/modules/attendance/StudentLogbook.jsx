@@ -276,26 +276,26 @@ const dayToDisplay = dateParts.join().trim();
     <div className="p-4">
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
         <div>
-          <p className="font-mono-label text-[10.5px] text-[#ccff00] uppercase tracking-[0.24em] font-semibold">
+          <p className="font-mono-label text-[10.5px] text-[#c4622d] uppercase tracking-[0.24em] font-semibold">
             Student · Attendance
           </p>
-          <h1 className="mt-1.5 font-display text-2xl md:text-3xl font-bold text-[#f5f0e8] tracking-tight">
+          <h1 className="mt-1.5 font-display text-2xl md:text-3xl font-bold text-[#2d2a24] tracking-tight">
             Field Logbook
           </h1>
-          <span className="mt-2.5 block h-[3px] w-14 rounded-full bg-gradient-to-r from-[#ccff00] to-[#b8e600]" />
+          <span className="mt-2.5 block h-[3px] w-14 rounded-full bg-gradient-to-r from-[#c4622d] to-[#a85225]" />
         </div>
 
         <div className="flex gap-3">
           <button
             onClick={() => setShowForm(!showForm)}
-            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-[#ccff00] to-[#b8e600] text-white px-5 py-2.5 text-sm font-semibold shadow-[0_10px_20px_-12px_rgba(15,181,174,0.7)] transition hover:brightness-105"
+            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-[#c4622d] to-[#a85225] text-white px-5 py-2.5 text-sm font-semibold shadow-[0_10px_20px_-12px_rgba(196,98,45,0.35)] transition hover:brightness-105"
           >
             Fill Log Book
           </button>
 
           <button
             onClick={handleDownload}
-            className="inline-flex items-center gap-2 rounded-lg border-2 border-[#16243f] text-[#f5f0e8] px-5 py-2.5 text-sm font-semibold transition hover:bg-[#16243f] hover:text-white"
+            className="inline-flex items-center gap-2 rounded-lg border-2 border-[#e5e0d8] text-[#2d2a24] px-5 py-2.5 text-sm font-semibold transition hover:bg-[#e5e0d8] hover:text-[#2d2a24]"
           >
             Download Logbook
           </button>
@@ -347,7 +347,7 @@ const dayToDisplay = dateParts.join().trim();
 
       {/* Preview Table */}
       {entries.length > 0 && (
-        <table className="mt-6 w-full border-collapse border border-[#2a2a2a]">
+        <table className="mt-6 w-full border-collapse border border-[#e5e0d8]">
           <thead>
             <tr className="bg-gray-200">
               <th className="border p-2">Index</th>

@@ -7,16 +7,16 @@ const BreadCrump = () => {
 
   return (
     <nav aria-label="Breadcrumb" className="w-full">
-      <ol className="flex items-center gap-0 border border-[#2a2a2a] bg-[#141414] px-4 py-2">
-        <li className="pr-3 mr-1 border-r border-[#2a2a2a]">
-          <span className="font-mono-label text-[10px] font-bold uppercase tracking-[0.28em] text-[#ccff00]">
+      <ol className="flex items-center gap-0 border border-[#e5e0d8] bg-white px-4 py-2">
+        <li className="pr-3 mr-1 border-r border-[#e5e0d8]">
+          <span className="font-mono-label text-[9px] font-semibold uppercase tracking-[0.2em] text-[#c4622d]">
             FMS
           </span>
         </li>
         <li>
           <Link
             to="/"
-            className="flex items-center text-[#6b6560] hover:text-[#ccff00] transition-colors"
+            className="flex items-center text-[#a6a199] hover:text-[#c4622d] transition-colors"
           >
             <HomeIcon className="h-4 w-4" />
           </Link>
@@ -26,7 +26,7 @@ const BreadCrump = () => {
           return (
             <li key={to} className="flex items-center">
               <svg
-                className="h-4 w-4 text-[#2a2a2a] mx-2"
+                className="h-4 w-4 text-[#d4cfc6] mx-2"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -34,7 +34,7 @@ const BreadCrump = () => {
               </svg>
               <Link
                 to={to}
-                className="font-mono-label text-[10px] font-medium uppercase tracking-[0.08em] text-[#9a938a] hover:text-[#ccff00] transition-colors"
+                className="font-mono-label text-[10px] font-medium uppercase tracking-[0.06em] text-[#7a756d] hover:text-[#c4622d] transition-colors"
               >
                 {value}
               </Link>

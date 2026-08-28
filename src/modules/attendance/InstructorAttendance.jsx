@@ -65,11 +65,11 @@ export default function InstructorAttendance() {
     <Card
       title={
         <div>
-          <p className="font-mono-label text-[10.5px] text-[#ccff00] uppercase tracking-[0.24em] font-semibold">
+          <p className="font-mono-label text-[10.5px] text-[#c4622d] uppercase tracking-[0.24em] font-semibold">
             Instructor · Attendance
           </p>
           <div className="mt-1 flex items-center gap-3">
-            <h1 className="font-display text-xl md:text-2xl font-bold text-[#f5f0e8] tracking-tight">
+            <h1 className="font-display text-xl md:text-2xl font-bold text-[#2d2a24] tracking-tight">
               Cohort Attendance Monitor
             </h1>
             <Tag color="geekblue">{instructorName}</Tag>

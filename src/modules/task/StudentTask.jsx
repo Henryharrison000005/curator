@@ -26,7 +26,7 @@ export default function StudentTask() {
       title: "Task Name",
       dataIndex: "title",
       key: "title",
-      render: (text) => <span className="font-semibold text-[#f5f0e8]">{text}</span>,
+      render: (text) => <span className="font-semibold text-[#2d2a24]">{text}</span>,
       width: 200,
       ellipsis: true,
     },
@@ -34,7 +34,7 @@ export default function StudentTask() {
       title: "Description",
       dataIndex: "description",
       key: "description",
-      render: (text) => <span className="text-[#9a938a]">{text}</span>,
+      render: (text) => <span className="text-[#7a756d]">{text}</span>,
       ellipsis: true,
     },
     {
@@ -72,44 +72,44 @@ export default function StudentTask() {
         members && members.length > 0 ? (
           <ul className="pl-2 text-xs">
             {members.map((m, idx) => (
-              <li key={idx} className="text-[#9a938a]">
+              <li key={idx} className="text-[#7a756d]">
                 {m}
               </li>
             ))}
           </ul>
         ) : (
-          <span className="text-[#3a3a3a] italic">-</span>
+          <span className="text-[#c8c3ba] italic">-</span>
         ),
     },
   ];
 
   return (
     <div className="w-full">
-      <div className="w-full bg-[#141414] border border-[#2a2a2a] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)] rounded-lg md:rounded-2xl p-3 md:p-6 lg:p-8 relative z-10">
+      <div className="w-full bg-[#ffffff] border border-[#e5e0d8] shadow-[0_20px_50px_-20px_rgba(45,42,36,0.08)] rounded-lg md:rounded-2xl p-3 md:p-6 lg:p-8 relative z-10">
         <div className="mb-6 md:mb-8">
-          <p className="font-mono-label text-[10.5px] text-[#ccff00] uppercase tracking-[0.24em] font-semibold">
+          <p className="font-mono-label text-[10.5px] text-[#c4622d] uppercase tracking-[0.24em] font-semibold">
             Student · Taskdesk
           </p>
-          <h1 className="mt-2 font-display text-2xl md:text-3xl font-bold text-[#f5f0e8] tracking-tight">
+          <h1 className="mt-2 font-display text-2xl md:text-3xl font-bold text-[#2d2a24] tracking-tight">
             My Assigned Tasks
           </h1>
-          <span className="mt-3 block h-[3px] w-14 rounded-full bg-gradient-to-r from-[#ccff00] to-[#b8e600]" />
+          <span className="mt-3 block h-[3px] w-14 rounded-full bg-gradient-to-r from-[#c4622d] to-[#a85225]" />
         </div>
 
         {/* Mobile Card View - Hidden on md and above */}
         <div className="md:hidden space-y-3">
           {loading ? (
-            <div className="text-center text-[#6b6560] py-8">Loading tasks...</div>
+            <div className="text-center text-[#a6a199] py-8">Loading tasks...</div>
           ) : tasks.length === 0 ? (
-            <div className="text-center text-[#3a3a3a] py-8">No tasks assigned yet.</div>
+            <div className="text-center text-[#c8c3ba] py-8">No tasks assigned yet.</div>
           ) : (
             tasks.map((task) => (
               <div
                 key={task.id}
-                className="border border-[#2a2a2a] rounded-lg p-3 bg-[#141414] shadow-[0_4px_12px_-6px_rgba(0,0,0,0.4)] space-y-2"
+                className="border border-[#e5e0d8] rounded-lg p-3 bg-[#ffffff] shadow-[0_4px_12px_-6px_rgba(45,42,36,0.06)] space-y-2"
               >
                 <div className="flex items-center justify-between gap-2">
-                  <h3 className="font-bold text-sm text-[#f5f0e8] flex-1 truncate">
+                  <h3 className="font-bold text-sm text-[#2d2a24] flex-1 truncate">
                     {task.title}
                   </h3>
                   <Tag
@@ -128,7 +128,7 @@ export default function StudentTask() {
                 <p className="text-xs text-gray-600 line-clamp-2">
                   {task.description}
                 </p>
-                <div className="text-xs text-[#6b6560] space-y-1">
+                <div className="text-xs text-[#a6a199] space-y-1">
                   <div>
                     <span className="font-medium">Assigned:</span> {task.assignedBy}
                   </div>
@@ -138,10 +138,10 @@ export default function StudentTask() {
                 </div>
                 {task.group && task.members && task.members.length > 0 && (
                   <div className="border-t pt-2 mt-2">
-                    <div className="font-semibold text-[#f5f0e8] mb-1 text-xs">
+                    <div className="font-semibold text-[#2d2a24] mb-1 text-xs">
                       Members:
                     </div>
-                    <ul className="list-disc list-inside text-xs text-[#9a938a] space-y-0.5">
+                    <ul className="list-disc list-inside text-xs text-[#7a756d] space-y-0.5">
                       {task.members.map((m, idx) => (
                         <li key={idx}>{m}</li>
                       ))}

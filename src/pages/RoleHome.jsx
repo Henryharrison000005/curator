@@ -45,41 +45,41 @@ function RoleHome() {
   return (
     <div className="w-full space-y-8">
       {/* Hero band */}
-      <section className="relative overflow-hidden bg-[#141414] border-2 border-[#2a2a2a] px-7 md:px-10 py-9 md:py-11">
-        <div className="pointer-events-none absolute inset-0 topogrid-invert opacity-30" />
-        <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#ccff00]/[0.06] blur-[100px]" />
+      <section className="relative overflow-hidden bg-[#2d2a24] border border-[#3d3a33] px-7 md:px-10 py-9 md:py-11">
+        <div className="pointer-events-none absolute inset-0 topogrid-invert opacity-20" />
+        <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#c4622d]/[0.1] blur-[80px]" />
 
         <div className="relative">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="live-dot absolute inline-flex h-full w-full rounded-full bg-[#ccff00]" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#ccff00]" />
+            <span className="relative flex h-[6px] w-[6px]">
+              <span className="live-dot absolute inline-flex h-full w-full rounded-full bg-[#5a8a3c]" />
+              <span className="relative inline-flex rounded-full h-[6px] w-[6px] bg-[#5a8a3c]" />
             </span>
-            <span className="font-mono-label text-[9px] text-[#6b6560] uppercase tracking-[0.28em]">
+            <span className="font-mono-label text-[9px] text-white/40 uppercase tracking-[0.2em]">
               {badge} Dashboard
             </span>
           </div>
 
-          <h1 className="font-display font-black text-3xl md:text-[2.5rem] text-[#f5f0e8] tracking-tight leading-[1.1]">
+          <h1 className="font-display font-black text-3xl md:text-[2.4rem] text-white tracking-tight leading-[1.1]">
             Welcome back,
             <br />
-            <span className="text-[#ccff00]">{displayName}</span>
+            <span className="text-[#c4622d]">{displayName}</span>
           </h1>
-          <p className="mt-4 text-[#6b6560] text-sm md:text-base max-w-lg leading-relaxed">
+          <p className="mt-4 text-white/45 text-sm md:text-base max-w-lg leading-relaxed">
             Everything you need to run your part of the field program — from tasks
             to attendance — is one step away.
           </p>
 
-          <div className="mt-7 flex items-center gap-6 font-mono-label text-[9px] text-[#3a3a3a] uppercase tracking-[0.22em]">
+          <div className="mt-7 flex items-center gap-6 font-mono-label text-[9px] text-white/25 uppercase tracking-[0.18em]">
             <span className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#ccff00]" />
+              <span className="h-[3px] w-[3px] rounded-full bg-[#c4622d]" />
               Module {actions.length}
             </span>
             <span className="hidden sm:flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#ff4d4d]" /> Access Granted
+              <span className="h-[3px] w-[3px] rounded-full bg-[#5a8a3c]" /> Access Granted
             </span>
             <span className="hidden md:flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#ccff00]" /> Live Sync
+              <span className="h-[3px] w-[3px] rounded-full bg-white/20" /> Live Sync
             </span>
           </div>
         </div>
@@ -88,10 +88,10 @@ function RoleHome() {
       {/* Action grid */}
       <section>
         <div className="flex items-baseline justify-between mb-5">
-          <h2 className="font-display font-black text-xl text-[#f5f0e8]">
+          <h2 className="font-display font-bold text-xl text-[#2d2a24]">
             Your workbench
           </h2>
-          <span className="font-mono-label text-[9px] text-[#6b6560] uppercase tracking-[0.22em]">
+          <span className="font-mono-label text-[9px] text-[#a6a199] uppercase tracking-[0.18em]">
             {actions.length} modules
           </span>
         </div>
@@ -105,20 +105,20 @@ function RoleHome() {
               style={{ "--reveal-delay": `${i * 60}ms` }}
             >
               <div className="flex items-start justify-between">
-                <div className="flex h-11 w-11 items-center justify-center bg-[#ccff00]/[0.08] text-[#ccff00] border border-[#ccff00]/20 group-hover:bg-[#ccff00] group-hover:text-[#0a0a0a] group-hover:border-[#ccff00] transition-all duration-200">
+                <div className="flex h-10 w-10 items-center justify-center bg-[#c4622d]/[0.06] text-[#c4622d] border border-[#c4622d]/15 group-hover:bg-[#c4622d] group-hover:text-white group-hover:border-[#c4622d] transition-all duration-200">
                   <action.icon className="h-5 w-5" />
                 </div>
-                <span className="font-mono-label text-[10px] text-[#3a3a3a] tracking-[0.18em]">
+                <span className="font-mono-label text-[10px] text-[#d4cfc6] tracking-[0.12em]">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
-              <h3 className="mt-5 font-bold text-[15px] text-[#f5f0e8] group-hover:text-[#ccff00] transition-colors">
+              <h3 className="mt-4 font-semibold text-[15px] text-[#2d2a24] group-hover:text-[#c4622d] transition-colors">
                 {action.title}
               </h3>
-              <p className="mt-1.5 text-sm text-[#9a938a] leading-relaxed">
+              <p className="mt-1.5 text-sm text-[#7a756d] leading-relaxed">
                 {action.description}
               </p>
-              <div className="mt-4 flex items-center gap-1.5 font-mono-label text-[10px] text-[#ccff00] uppercase tracking-[0.14em] opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="mt-4 flex items-center gap-1.5 font-mono-label text-[10px] text-[#c4622d] uppercase tracking-[0.12em] opacity-0 group-hover:opacity-100 transition-opacity">
                 Open <ArrowRightIcon className="h-3 w-3" />
               </div>
             </Link>

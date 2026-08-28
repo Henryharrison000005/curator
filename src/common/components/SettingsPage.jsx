@@ -206,7 +206,7 @@ function SettingsPage({
       children: (
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold text-[#f5f0e8] mb-4">
+            <h3 className="text-lg font-semibold text-[#2d2a24] mb-4">
               Personal Information
             </h3>
             <Form
@@ -263,7 +263,7 @@ function SettingsPage({
                   { max: 14, message: "Phone number must be at most 14 characters" },
                 ]}
               >
-                <Input className="rounded-lg focus:border-[#ccff00]" />
+                <Input className="rounded-lg focus:border-[#c4622d]" />
               </Form.Item>
 
               {showDepartment && (
@@ -284,7 +284,7 @@ function SettingsPage({
                 type="primary"
                 htmlType="submit"
                 loading={loading}
-                className="w-full md:w-auto bg-[#ccff00] text-[#0a0a0a] hover:bg-[#b8e600]"
+                className="w-full md:w-auto bg-[#c4622d] text-white hover:bg-[#a85225]"
               >
                 Update Profile
               </Button>
@@ -304,18 +304,18 @@ function SettingsPage({
       children: (
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold text-[#f5f0e8] mb-4">
+            <h3 className="text-lg font-semibold text-[#2d2a24] mb-4">
               Password & Security
             </h3>
-            <div className="flex items-center justify-between p-4 bg-[#0e0e0e] rounded-lg border border-[#2a2a2a]">
+            <div className="flex items-center justify-between p-4 bg-[#f4f1ec] rounded-lg border border-[#e5e0d8]">
               <div>
-                <p className="font-medium text-[#f5f0e8]">Password</p>
-                <p className="text-sm text-[#6b6560]">Change your account password</p>
+                <p className="font-medium text-[#2d2a24]">Password</p>
+                <p className="text-sm text-[#a6a199]">Change your account password</p>
               </div>
               <Button
                 type="primary"
                 onClick={() => setShowPasswordModal(true)}
-                className="bg-[#ccff00] text-[#0a0a0a] hover:bg-[#b8e600]"
+                className="bg-[#c4622d] text-white hover:bg-[#a85225]"
               >
                 Change Password
               </Button>
@@ -334,7 +334,7 @@ function SettingsPage({
       key: "preferences",
       children: (
         <div className="space-y-6">
-          <h3 className="text-lg font-semibold text-[#f5f0e8]">
+          <h3 className="text-lg font-semibold text-[#2d2a24]">
             Display & System Preferences
           </h3>
 
@@ -380,13 +380,13 @@ function SettingsPage({
       key: "account",
       children: (
         <div className="space-y-6">
-          <h3 className="text-lg font-semibold text-[#f5f0e8]">Account Actions</h3>
+          <h3 className="text-lg font-semibold text-[#2d2a24]">Account Actions</h3>
 
           <div className="space-y-3">
-            <div className="flex items-center justify-between p-4 bg-[#0e0e0e] rounded-lg border border-[#2a2a2a]">
+            <div className="flex items-center justify-between p-4 bg-[#f4f1ec] rounded-lg border border-[#e5e0d8]">
               <div>
-                <p className="font-medium text-[#f5f0e8]">Download My Data</p>
-                <p className="text-sm text-[#6b6560]">
+                <p className="font-medium text-[#2d2a24]">Download My Data</p>
+                <p className="text-sm text-[#a6a199]">
                   Export a copy of your personal data in JSON format.
                 </p>
               </div>
@@ -395,7 +395,7 @@ function SettingsPage({
                 ghost
                 onClick={handleDownloadData}
                 icon={<DownloadOutlined />}
-                className="border-[#16243f] text-[#f5f0e8]"
+                className="border-[#e5e0d8] text-[#2d2a24]"
               >
                 Download
               </Button>
@@ -436,9 +436,9 @@ function SettingsPage({
 
   return (
     <div className="w-full">
-      <div className="w-full max-w-4xl bg-[#141414] border border-[#2a2a2a] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)] rounded-lg md:rounded-2xl p-3 md:p-6 lg:p-8 relative z-10">
+      <div className="w-full max-w-4xl bg-[#ffffff] border border-[#e5e0d8] shadow-[0_20px_50px_-20px_rgba(45,42,36,0.08)] rounded-lg md:rounded-2xl p-3 md:p-6 lg:p-8 relative z-10">
         <div className="mb-6">
-          <h1 className="text-2xl md:text-3xl font-extrabold text-[#f5f0e8] mb-2 text-center tracking-tight">
+          <h1 className="text-2xl md:text-3xl font-extrabold text-[#2d2a24] mb-2 text-center tracking-tight">
             Settings
           </h1>
           <p className="text-center text-gray-600 text-sm md:text-base">
@@ -516,7 +516,7 @@ function SettingsPage({
             htmlType="submit"
             loading={passwordLoading}
             block
-            className="bg-[#ccff00] text-[#0a0a0a] hover:bg-[#b8e600]"
+            className="bg-[#c4622d] text-white hover:bg-[#a85225]"
           >
             Change Password
           </Button>

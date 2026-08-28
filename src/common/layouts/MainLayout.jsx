@@ -46,13 +46,12 @@ function cn(...classes) {
 
 const Logo = () => (
   <div className="flex items-center gap-3">
-    <div className="relative flex h-10 w-10 items-center justify-center rounded-none bg-[#ccff00] text-[#0a0a0a] font-display font-black text-lg border-2 border-[#ccff00]">
+    <div className="flex h-9 w-9 items-center justify-center bg-[#c4622d] text-white font-display font-bold text-base">
       F
-      <span className="absolute -top-1.5 -right-1.5 h-2 w-2 rounded-full bg-[#ccff00] ring-2 ring-[#141414]" />
     </div>
     <div className="leading-tight">
-      <span className="font-display font-black text-[#f5f0e8] text-lg tracking-tight block">FMS</span>
-      <span className="font-mono-label text-[9px] text-[#6b6560] uppercase tracking-[0.28em]">Surveyor</span>
+      <span className="font-display font-bold text-[#2d2a24] text-base tracking-tight block">FMS</span>
+      <span className="font-mono-label text-[9px] text-[#a6a199] uppercase tracking-[0.18em]">Field Station</span>
     </div>
   </div>
 );
@@ -89,27 +88,27 @@ const MainLayout = () => {
           to={item.href}
           onClick={() => setSidebarOpen(false)}
           className={cn(
-            "group relative flex items-center gap-3 px-4 py-2.5 text-sm font-medium transition-all",
+            "group relative flex items-center gap-3 px-4 py-2.5 text-[13px] font-medium transition-all",
             active
-              ? "text-[#ccff00] bg-[#ccff00]/[0.06]"
-              : "text-[#9a938a] hover:text-[#f5f0e8] hover:bg-[#1e1e1e]",
+              ? "text-[#c4622d] bg-[#c4622d]/[0.06]"
+              : "text-[#7a756d] hover:text-[#2d2a24] hover:bg-[#f4f1ec]/60",
             extraClasses
           )}
         >
           {active && (
-            <span className="absolute left-0 top-1 bottom-1 w-[3px] bg-[#ccff00]" />
+            <span className="absolute left-0 top-1 bottom-1 w-[2px] bg-[#c4622d]" />
           )}
           <item.icon
             className={cn(
               "h-[18px] w-[18px] flex-shrink-0 transition-colors",
-              active ? "text-[#ccff00]" : "text-[#6b6560] group-hover:text-[#9a938a]"
+              active ? "text-[#c4622d]" : "text-[#a6a199] group-hover:text-[#7a756d]"
             )}
           />
           <span className="flex-1">{item.name}</span>
           <span
             className={cn(
-              "font-mono-label text-[10px] tracking-[0.18em]",
-              active ? "text-[#ccff00]/70" : "text-[#3a3a3a]"
+              "font-mono-label text-[10px] tracking-[0.12em]",
+              active ? "text-[#c4622d]/60" : "text-[#d4cfc6]"
             )}
           >
             {num}
@@ -122,28 +121,26 @@ const MainLayout = () => {
     <button
       onClick={handleLogout}
       className={cn(
-        "group flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-[#ff4d4d] hover:text-[#ff4d4d] hover:bg-[#ff4d4d]/[0.06] transition-colors",
+        "group flex items-center gap-3 px-4 py-2.5 text-[13px] font-medium text-[#b83a2a] hover:bg-[#b83a2a]/[0.04] transition-colors",
         extraClasses
       )}
     >
-      <ArrowLeftOnRectangleIcon className="h-[18px] w-[18px] text-[#ff4d4d]/60 group-hover:text-[#ff4d4d]" />
+      <ArrowLeftOnRectangleIcon className="h-[18px] w-[18px] text-[#b83a2a]/50 group-hover:text-[#b83a2a]" />
       <span>Log Out</span>
     </button>
   );
 
-  const sidebarBg = "flex flex-col bg-[#0e0e0e] border-r border-[#1e1e1e]";
-
   const footerUser = (
-    <div className="px-5 py-4 border-t border-[#1e1e1e]">
+    <div className="px-5 py-4 border-t border-[#e5e0d8]">
       <div className="flex items-center gap-3">
-        <div className="flex h-9 w-9 items-center justify-center bg-[#1e1e1e] text-[#ccff00] font-mono-label text-xs font-bold uppercase border border-[#2a2a2a]">
+        <div className="flex h-8 w-8 items-center justify-center bg-[#f4f1ec] text-[#c4622d] font-mono-label text-[10px] font-semibold uppercase">
           {(user?.name || "U").slice(0, 2)}
         </div>
         <div className="leading-tight min-w-0">
-          <p className="text-[#f5f0e8] text-sm font-medium truncate">
+          <p className="text-[#2d2a24] text-[13px] font-medium truncate">
             {user?.name || "User"}
           </p>
-          <p className="font-mono-label text-[9px] text-[#6b6560] uppercase tracking-[0.2em]">
+          <p className="font-mono-label text-[9px] text-[#a6a199] uppercase tracking-[0.18em]">
             {role}
           </p>
         </div>
@@ -152,7 +149,7 @@ const MainLayout = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
+    <div className="min-h-screen bg-[#faf7f2]">
       <MainHeader
         onMenuClick={() => setSidebarOpen(true)}
         sidebarOpen={sidebarOpen}
@@ -162,7 +159,7 @@ const MainLayout = () => {
       <div className="flex">
         {sidebarOpen && (
           <div
-            className="fixed inset-0 z-30 bg-black/60 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 z-30 bg-[#2d2a24]/20 backdrop-blur-sm lg:hidden"
             onClick={() => setSidebarOpen(false)}
           />
         )}
@@ -171,17 +168,17 @@ const MainLayout = () => {
         <aside
           className={cn(
             sidebarOpen ? "translate-x-0" : "-translate-x-full",
-            "fixed inset-y-0 z-40 w-72 transform transition-transform duration-250 ease-in-out lg:hidden",
-            sidebarBg
+            "fixed inset-y-0 z-40 w-64 transform transition-transform duration-250 ease-in-out lg:hidden",
+            "flex flex-col bg-white border-r border-[#e5e0d8]"
           )}
         >
-          <div className="relative flex items-center justify-between px-6 py-5 border-b border-[#1e1e1e]">
+          <div className="flex items-center justify-between px-5 py-5 border-b border-[#e5e0d8]">
             <Logo />
             <button
               onClick={() => setSidebarOpen(false)}
-              className="p-1 text-[#6b6560] hover:text-[#f5f0e8] hover:bg-[#1e1e1e] transition-colors"
+              className="p-1 text-[#a6a199] hover:text-[#2d2a24] transition-colors"
             >
-              <XMarkIcon className="h-6 w-6" />
+              <XMarkIcon className="h-5 w-5" />
             </button>
           </div>
           <nav className="flex-1 px-3 py-4 space-y-0.5 overflow-y-auto">
@@ -194,8 +191,8 @@ const MainLayout = () => {
         {/* Desktop sidebar */}
         <aside
           className={cn(
-            "hidden lg:flex lg:flex-col lg:fixed lg:inset-y-0 lg:z-30 lg:w-64 lg:pt-[62px]",
-            sidebarBg
+            "hidden lg:flex lg:flex-col lg:fixed lg:inset-y-0 lg:z-30 lg:w-60 lg:pt-[60px]",
+            "bg-white border-r border-[#e5e0d8]"
           )}
         >
           <div className="relative z-10 px-5 py-5">
@@ -208,8 +205,8 @@ const MainLayout = () => {
           <div className="relative z-10 px-4 py-4">{renderLogout("w-full")}</div>
         </aside>
 
-        <main className="flex-1 lg:ml-64">
-          <div className="px-4 sm:px-6 lg:px-8 py-5 max-w-[1200px] mx-auto">
+        <main className="flex-1 lg:ml-60">
+          <div className="px-4 sm:px-6 lg:px-8 py-5 max-w-[1100px] mx-auto">
             <div className="mb-4">
               <BreadCrump />
             </div>
