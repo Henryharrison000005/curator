@@ -5,41 +5,72 @@
 /* stylelint-disable */
 
 /* ============================================================
-   FIELD ATLAS — design tokens
-   Instrument-grade field management: ink-navy / teal / amber
+   SURVEYOR'S INSTRUMENT — dark mode design system
+   Deep black canvas / warm cream type / chartreuse accent
    ============================================================ */
 :root {
-  --ink: #0a1424;
-  --ink-2: #101c33;
-  --ink-3: #16243f;
-  --ink-4: #1f3050;
-  --moss: #0fb5ae;      /* primary teal */
-  --moss-2: #0e8a86;    /* teal deep */
-  --leaf: #2dd4bf;      /* teal bright */
-  --signal: #f2b134;    /* amber signal */
-  --signal-2: #e14a2b;  /* ember */
-  --ivory: #f4f6fa;     /* app canvas */
-  --bone: #e5e9f0;      /* border */
-  --paper: #ffffff;     /* surface */
-  --ink-text: #0f1b2e;
-  --ink-2-text: #5a6b85;  /* muted */
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --surface-2: #1e1e1e;
+  --surface-3: #282828;
+  --border: #2a2a2a;
+  --border-2: #3a3a3a;
+  --text: #f5f0e8;
+  --text-2: #9a938a;
+  --text-3: #6b6560;
+  --accent: #ccff00;
+  --accent-2: #b8e600;
+  --accent-3: #dfff50;
+  --danger: #ff4d4d;
+  --danger-2: #cc3333;
 
   /* rgb channels for Tailwind alpha modifiers */
-  --ink-rgb: 10 20 36;
-  --ink-2-rgb: 16 28 51;
-  --ink-3-rgb: 22 36 63;
-  --ink-4-rgb: 31 48 80;
-  --moss-rgb: 15 181 174;
-  --moss-2-rgb: 14 138 134;
-  --leaf-rgb: 45 212 191;
-  --signal-rgb: 242 177 52;
-  --signal-2-rgb: 225 74 43;
-  --ivory-rgb: 244 246 250;
-  --bone-rgb: 229 233 240;
-  --paper-rgb: 255 255 255;
+  --bg-rgb: 10 10 10;
+  --surface-rgb: 20 20 20;
+  --surface-2-rgb: 30 30 30;
+  --surface-3-rgb: 40 40 40;
+  --border-rgb: 42 42 42;
+  --border-2-rgb: 58 58 58;
+  --text-rgb: 245 240 232;
+  --text-2-rgb: 154 147 138;
+  --text-3-rgb: 107 101 96;
+  --accent-rgb: 204 255 0;
+  --accent-2-rgb: 184 230 0;
+  --accent-3-rgb: 223 255 80;
+  --danger-rgb: 255 77 77;
+  --danger-2-rgb: 204 51 51;
 
-  --line: rgba(10, 20, 36, 0.1);
-  --line-ivory: rgba(244, 246, 250, 0.14);
+  /* legacy aliases — map to dark values */
+  --pine: #141414;
+  --pine-2: #1e1e1e;
+  --pine-3: #0a0a0a;
+  --moss: #ccff00;
+  --moss-2: #b8e600;
+  --leaf: #dfff50;
+  --ivory: #0a0a0a;
+  --bone: #2a2a2a;
+  --paper: #141414;
+  --ink: #f5f0e8;
+  --ink-2: #9a938a;
+  --signal: #ccff00;
+  --signal-2: #ff4d4d;
+
+  --pine-rgb: 20 20 20;
+  --pine-2-rgb: 30 30 30;
+  --pine-3-rgb: 10 10 10;
+  --moss-rgb: 204 255 0;
+  --moss-2-rgb: 184 230 0;
+  --leaf-rgb: 223 255 80;
+  --ivory-rgb: 10 10 10;
+  --bone-rgb: 42 42 42;
+  --paper-rgb: 20 20 20;
+  --ink-rgb: 245 240 232;
+  --ink-2-rgb: 154 147 138;
+  --signal-rgb: 204 255 0;
+  --signal-2-rgb: 255 77 77;
+
+  --line: rgba(245, 240, 232, 0.07);
+  --line-ivory: rgba(245, 240, 232, 0.04);
 
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -47,8 +78,8 @@
 }
 
 ::selection {
-  background: var(--moss);
-  color: var(--ink);
+  background: var(--accent);
+  color: var(--bg);
 }
 
 html {
@@ -57,8 +88,8 @@ html {
 
 body {
   font-family: var(--sans);
-  color: var(--ink-text);
-  background: var(--ivory);
+  color: var(--text);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -71,37 +102,37 @@ body {
 }
 
 /* ============================================================
-   TEXTURES
+   TEXTURES (dark mode)
    ============================================================ */
 .grain::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.5;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");
   mix-blend-mode: overlay;
 }
 
-/* fine topographic-style grid (survey / instrument feel) */
+/* fine topographic grid — faint cream on dark */
 .topogrid {
   background-image:
     linear-gradient(to right, var(--line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--line) 1px, transparent 1px);
-  background-size: 44px 44px;
+  background-size: 48px 48px;
 }
 .topogrid-invert {
   background-image:
     linear-gradient(to right, var(--line-ivory) 1px, transparent 1px),
     linear-gradient(to bottom, var(--line-ivory) 1px, transparent 1px);
-  background-size: 44px 44px;
+  background-size: 48px 48px;
 }
 
-/* crosshair axis (little + at render points) */
+/* crosshair — surveyor's mark */
 .crosshair {
   background-image:
-    radial-gradient(circle at center, var(--line) 1.5px, transparent 1.6px);
-  background-size: 44px 44px;
+    radial-gradient(circle at center, rgba(245, 240, 232, 0.04) 1.5px, transparent 1.6px);
+  background-size: 48px 48px;
 }
 
 /* ============================================================
@@ -110,7 +141,7 @@ body {
 @keyframes riseIn {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -119,7 +150,7 @@ body {
 }
 .rise {
   opacity: 0;
-  animation: riseIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: riseIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: var(--rise-delay, 0ms);
 }
 
@@ -133,11 +164,10 @@ body {
   animation-delay: var(--rise-delay, 0ms);
 }
 
-/* staggered reveal on scroll */
 .reveal {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0ms);
   will-change: opacity, transform;
 }
@@ -153,15 +183,15 @@ body {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee 30s linear infinite;
+  animation: marquee 32s linear infinite;
 }
 .marquee:hover .marquee-track {
   animation-play-state: paused;
 }
 
 @keyframes pulseDot {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.5); }
-  50% { box-shadow: 0 0 0 7px rgba(45, 212, 191, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(204, 255, 0, 0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(204, 255, 0, 0); }
 }
 .live-dot {
   animation: pulseDot 2.2s ease-in-out infinite;
@@ -190,13 +220,13 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: -4px;
   height: 2px;
   width: 100%;
   transform: scaleX(0);
   transform-origin: left;
-  background: var(--moss);
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  background: var(--accent);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .nav-link:hover::after,
 .nav-link.active::after {
@@ -204,27 +234,15 @@ body {
 }
 
 /* ============================================================
-   LEGACY ALIASES (kept for compatibility)
-   ============================================================ */
-:root {
-  --pine: #16243f;          /* dark navy headings */
-  --pine-2: #101c33;
-  --pine-3: #0a1424;        /* footer / deepest navy */
-  --pine-rgb: 22 36 63;
-  --pine-2-rgb: 16 28 51;
-  --pine-3-rgb: 10 20 36;
-}
-
-/* ============================================================
    COMPONENTS
    ============================================================ */
-/* --- landing ledger utilities --- */
+/* ledger utility lines — dark mode */
 .ledger-rules-pine {
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0,
     transparent 23px,
-    rgba(244, 246, 250, 0.08) 24px
+    rgba(245, 240, 232, 0.04) 24px
   );
 }
 .paper-rules {
@@ -240,45 +258,56 @@ body {
   animation: fadeIn 0.6s ease forwards;
   animation-delay: var(--line-delay, 0ms);
 }
+
+/* rule card — dark mode */
 .rule-card {
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  border-color: var(--border) !important;
+  background: var(--surface) !important;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .rule-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--moss);
-  box-shadow: 0 24px 45px -28px rgba(15, 181, 174, 0.5);
+  transform: translateY(-3px);
+  border-color: var(--accent) !important;
+  box-shadow: 0 20px 40px -20px rgba(204, 255, 0, 0.12);
 }
+
+/* lamp glow — chartreuse on dark */
 .lamp {
-  box-shadow: 0 0 12px 3px rgba(242, 177, 52, 0.55);
+  box-shadow: 0 0 14px 4px rgba(204, 255, 0, 0.45);
 }
+
+/* approved stamp */
 .stamp {
-  filter: drop-shadow(0 2px 4px rgba(10, 20, 36, 0.25));
+  filter: drop-shadow(0 2px 6px rgba(10, 10, 10, 0.5));
 }
+
+/* tabular numbers */
 .total-count {
   font-variant-numeric: tabular-nums;
 }
 
-/* ============================================================
-   COMPONENTS
-   ============================================================ */
-/* shared module card: framed, hairline, left accent rule */
+/* fms-card — dark mode card shell */
 .fms-card {
   position: relative;
-  background: var(--paper);
-  border: 1px solid var(--bone);
-  border-radius: 16px;
-  box-shadow: 0 1px 2px rgba(10, 20, 36, 0.04), 0 14px 34px -30px rgba(10, 20, 36, 0.4);
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 4px;
   overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .fms-card::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  height: 3px;
+  height: 2px;
   width: 0;
-  background: linear-gradient(90deg, var(--moss), var(--leaf));
-  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  background: var(--accent);
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fms-card:hover {
+  border-color: var(--border-2);
+  box-shadow: 0 0 0 1px var(--accent), 0 20px 40px -20px rgba(204, 255, 0, 0.08);
 }
 .fms-card:hover::before {
   width: 100%;
@@ -290,71 +319,109 @@ body {
   justify-content: space-between;
   gap: 12px;
   padding: 18px 22px;
-  border-bottom: 1px solid var(--bone);
+  border-bottom: 1px solid var(--border);
 }
 .fms-card__body {
   padding: 22px;
 }
 
-/* primary action */
+/* primary action — chartreuse */
 .btn-fms {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, var(--moss-2), var(--moss));
-  color: #ffffff;
+  background: var(--accent);
+  color: var(--bg);
   border: none;
-  border-radius: 10px;
-  padding: 10px 18px;
-  font-weight: 600;
+  border-radius: 2px;
+  padding: 10px 20px;
+  font-weight: 700;
   font-size: 14px;
+  letter-spacing: 0.02em;
   cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.25s ease, filter 0.25s ease;
-  box-shadow: 0 10px 22px -12px rgba(15, 181, 174, 0.6);
+  transition: background 0.15s ease, box-shadow 0.25s ease, transform 0.1s ease;
+  box-shadow: 0 12px 28px -10px rgba(204, 255, 0, 0.35);
 }
 .btn-fms:hover {
-  filter: brightness(1.05);
-  box-shadow: 0 14px 30px -12px rgba(15, 181, 174, 0.7);
+  background: var(--accent-2);
+  box-shadow: 0 16px 36px -10px rgba(204, 255, 0, 0.45);
 }
 .btn-fms:active {
   transform: translateY(1px);
 }
 .btn-fms:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
 /* eyebrow / section label */
 .eyebrow {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--moss-2);
+  color: var(--accent);
   font-weight: 600;
 }
 
-/* scrollbar */
+/* scrollbar — dark */
 ::-webkit-scrollbar {
-  width: 11px;
-  height: 11px;
+  width: 10px;
+  height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--ivory);
+  background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #c3cddd;
-  border: 3px solid var(--ivory);
+  background: var(--border-2);
+  border: 2px solid var(--bg);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--moss);
+  background: var(--accent);
 }
 
-/* focus rings */
+/* focus rings — chartreuse */
 :focus-visible {
-  outline: 2px solid var(--moss);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+/* antd dark overrides for common elements */
+.ant-table {
+  background: var(--surface) !important;
+}
+.ant-table-thead > tr > th {
+  background: var(--surface-2) !important;
+  color: var(--text) !important;
+  border-bottom-color: var(--border) !important;
+}
+.ant-table-tbody > tr > td {
+  border-bottom-color: var(--border) !important;
+  color: var(--text) !important;
+}
+.ant-table-tbody > tr:hover > td {
+  background: var(--surface-2) !important;
+}
+.ant-modal .ant-modal-content {
+  background: var(--surface) !important;
+  border: 1px solid var(--border);
+}
+.ant-modal .ant-modal-header {
+  background: var(--surface) !important;
+  border-bottom: 1px solid var(--border);
+}
+.ant-modal .ant-modal-title {
+  color: var(--text) !important;
+}
+.ant-btn-default {
+  background: var(--surface-2) !important;
+  border-color: var(--border-2) !important;
+  color: var(--text) !important;
+}
+.ant-btn-default:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
 }
 
 /* reduced motion */

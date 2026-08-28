@@ -157,11 +157,11 @@ export default function SupervisorAttendance() {
     <Card
       title={
         <div>
-          <p className="font-mono-label text-[10.5px] text-[#0e8a86] uppercase tracking-[0.24em] font-semibold">
+          <p className="font-mono-label text-[10.5px] text-[#ccff00] uppercase tracking-[0.24em] font-semibold">
             Supervisor · Attendance
           </p>
           <div className="mt-1 flex items-center gap-3">
-            <h1 className="font-display text-xl md:text-2xl font-bold text-[#16243f] tracking-tight">
+            <h1 className="font-display text-xl md:text-2xl font-bold text-[#f5f0e8] tracking-tight">
               Verify Student Attendance
             </h1>
             <Tag color="geekblue">{supervisorName}</Tag>

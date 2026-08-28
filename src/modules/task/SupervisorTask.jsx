@@ -88,7 +88,7 @@ const SupervisorTasks = () => {
       title: "Task Title",
       dataIndex: "title",
       key: "title",
-      render: (text) => <span className="font-semibold text-[#16243f]">{text}</span>,
+      render: (text) => <span className="font-semibold text-[#f5f0e8]">{text}</span>,
     },
     {
       title: "Description",
@@ -119,13 +119,13 @@ const SupervisorTasks = () => {
         members && members.length > 0 ? (
           <ul className="pl-2 text-xs">
             {members.map((m, idx) => (
-              <li key={idx} className="text-gray-700">
+              <li key={idx} className="text-[#9a938a]">
                 {m}
               </li>
             ))}
           </ul>
         ) : (
-          <span className="text-gray-400 italic">-</span>
+          <span className="text-[#3a3a3a] italic">-</span>
         ),
     },
     {
@@ -142,22 +142,22 @@ const SupervisorTasks = () => {
 
   return (
     <div className="w-full">
-      <div className="w-full bg-white border border-[#e5e7eb] shadow-2xl rounded-lg md:rounded-2xl p-3 md:p-6 lg:p-8 relative z-10">
+      <div className="w-full bg-[#141414] border border-[#2a2a2a] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)] rounded-lg md:rounded-2xl p-3 md:p-6 lg:p-8 relative z-10">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-4">
           <div>
-            <p className="font-mono-label text-[10.5px] text-[#0e8a86] uppercase tracking-[0.24em] font-semibold">
+            <p className="font-mono-label text-[10.5px] text-[#ccff00] uppercase tracking-[0.24em] font-semibold">
               Supervisor · Taskdesk
             </p>
-            <h1 className="mt-1.5 text-2xl md:text-3xl font-bold font-display text-[#16243f] tracking-tight">
+            <h1 className="mt-1.5 text-2xl md:text-3xl font-bold font-display text-[#f5f0e8] tracking-tight">
               Manage Group Tasks
             </h1>
-            <span className="mt-2.5 block h-[3px] w-14 rounded-full bg-gradient-to-r from-[#0e8a86] to-[#0fb5ae]" />
+            <span className="mt-2.5 block h-[3px] w-14 rounded-full bg-gradient-to-r from-[#ccff00] to-[#b8e600]" />
           </div>
           <Button
             type="primary"
             icon={<PlusOutlined />}
             onClick={openCreate}
-            className="bg-[#0e8a86] hover:bg-[#0fb5ae]"
+            className="bg-[#ccff00] text-[#0a0a0a] hover:bg-[#b8e600]"
           >
             Add Task
           </Button>

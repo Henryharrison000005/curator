@@ -179,8 +179,8 @@ const InstructorApplications = () => {
       key: "full_name",
       render: (_, record) => (
         <div>
-          <span className="font-medium text-gray-800">{record.full_name}</span>
-          <span className="block text-xs text-gray-500">
+          <span className="font-medium text-[#f5f0e8]">{record.full_name}</span>
+          <span className="block text-xs text-[#6b6560]">
             {record.username} · {record.email}
           </span>
         </div>
@@ -190,7 +190,7 @@ const InstructorApplications = () => {
       title: "College",
       dataIndex: "college",
       key: "college",
-      render: (text) => <span className="text-gray-700">{text}</span>,
+      render: (text) => <span className="text-[#9a938a]">{text}</span>,
     },
     {
       title: "Age / Gender",
@@ -242,7 +242,7 @@ const InstructorApplications = () => {
             />
           </Space>
         ) : (
-          <span className="text-gray-400 text-sm">No action</span>
+          <span className="text-[#3a3a3a] text-sm">No action</span>
         ),
     },
   ];
@@ -252,20 +252,20 @@ const InstructorApplications = () => {
       <Card
         title={
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#eafaf8] text-[#0e8a86] ring-1 ring-[#c9f0ec]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#ccff00]/[0.08] text-[#ccff00] ring-1 ring-[#ccff00]/20">
               <InboxOutlined className="text-xl" />
             </div>
             <div>
-              <h1 className="font-display text-xl md:text-2xl font-bold text-[#16243f] tracking-tight">
+              <h1 className="font-display text-xl md:text-2xl font-bold text-[#f5f0e8] tracking-tight">
                 Field Applications
               </h1>
-              <p className="font-mono-label text-[11px] text-gray-500 mt-1 uppercase tracking-wide">
+              <p className="font-mono-label text-[11px] text-[#6b6560] mt-1 uppercase tracking-wide">
                 Review &amp; accept · {instructorName}
               </p>
             </div>
           </div>
         }
-        className="shadow-lg"
+        className="shadow-[0_12px_30px_-12px_rgba(0,0,0,0.5)]"
         extra={<Button type="default" onClick={loadApplications}>Refresh</Button>}
       >
         <div className="mb-4">

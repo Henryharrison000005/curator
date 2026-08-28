@@ -25,79 +25,79 @@ export default function Login() {
     }, [isAuthenticated, navigate]);
 
     return (
-        <div className="min-h-screen bg-ink flex relative overflow-hidden">
+        <div className="min-h-screen bg-[#0a0a0a] flex relative overflow-hidden">
             {/* left brand panel */}
-            <div className="hidden lg:flex lg:w-1/2 relative flex-col justify-between p-12 overflow-hidden bg-ink-2">
-                <div className="pointer-events-none absolute inset-0 topogrid-invert opacity-50" />
-                <div className="pointer-events-none absolute -top-32 -left-32 h-[26rem] w-[26rem] rounded-full bg-moss/25 blur-3xl" />
-                <div className="pointer-events-none absolute bottom-0 right-0 w-full h-40 bg-gradient-to-t from-ink to-transparent" />
+            <div className="hidden lg:flex lg:w-[45%] relative flex-col justify-between px-12 py-10 overflow-hidden bg-[#0e0e0e] border-r border-[#1e1e1e]">
+                <div className="pointer-events-none absolute inset-0 topogrid-invert opacity-40" />
+                <div className="pointer-events-none absolute -top-32 -left-32 h-[26rem] w-[26rem] rounded-full bg-[#ccff00]/[0.04] blur-[120px]" />
+                <div className="pointer-events-none absolute bottom-0 right-0 w-full h-48 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
 
-                <div className="relative flex items-center gap-3">
-                    <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-moss-2 to-moss text-white shadow-[0_8px_24px_-8px_rgba(15,181,174,0.9)] font-display font-black text-xl">
+                <div className="relative z-10 flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center bg-[#ccff00] text-[#0a0a0a] font-display font-black text-xl border-2 border-[#ccff00]">
                         F
-                        <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-signal ring-2 ring-ink-2" />
                     </div>
                     <div className="leading-tight">
-                        <span className="font-display font-bold text-white text-xl tracking-tight block">FMS</span>
-                        <span className="font-mono-label text-[9.5px] text-white/45 uppercase tracking-[0.22em]">Field Atlas</span>
+                        <span className="font-display font-black text-[#f5f0e8] text-lg tracking-tight block">FMS</span>
+                        <span className="font-mono-label text-[9px] text-[#6b6560] uppercase tracking-[0.28em]">Surveyor</span>
                     </div>
                 </div>
 
-                <div className="relative max-w-md">
-                    <p className="font-mono-label text-[10.5px] text-moss uppercase tracking-[0.26em] mb-5">
+                <div className="relative z-10 max-w-lg">
+                    <p className="font-mono-label text-[10px] text-[#ccff00] uppercase tracking-[0.3em] mb-6">
                         One secure gateway
                     </p>
-                    <h1 className="font-display font-semibold text-4xl leading-[1.12] text-white tracking-tight">
-                        Field oversight,
+                    <h1 className="font-display font-black text-[2.8rem] leading-[1.05] text-[#f5f0e8] tracking-tight">
+                        Field
                         <br />
-                        <span className="text-moss">charted in one place.</span>
+                        <span className="text-[#ccff00] italic">oversight,</span>
+                        <br />
+                        one record.
                     </h1>
-                    <p className="mt-5 text-white/60 text-base leading-relaxed">
+                    <p className="mt-8 text-[#6b6560] text-[0.95rem] leading-relaxed max-w-md">
                         Placement, tasks, and attendance across every site — logged,
-                        approved, and reporting in real time.
+                        approved, and reported in real time.
                     </p>
                 </div>
 
-                <div className="relative flex items-center gap-6 font-mono-label text-[10px] text-white/35 uppercase tracking-[0.18em]">
+                <div className="relative z-10 flex items-center gap-6 font-mono-label text-[9px] text-[#3a3a3a] uppercase tracking-[0.2em]">
                     <span>Placement</span>
-                    <i className="not-italic h-1 w-1 rounded-full bg-moss" />
+                    <span className="h-1 w-1 rounded-full bg-[#ccff00]" />
                     <span>Supervision</span>
-                    <i className="not-italic h-1 w-1 rounded-full bg-signal" />
+                    <span className="h-1 w-1 rounded-full bg-[#ff4d4d]" />
                     <span>Reporting</span>
                 </div>
             </div>
 
             {/* form panel */}
             <div className="flex-1 min-h-screen flex flex-col justify-center items-center relative px-6 py-10">
-                <div className="pointer-events-none absolute inset-0 topogrid opacity-60" />
-                <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-moss/10 blur-3xl" />
+                <div className="pointer-events-none absolute inset-0 crosshair" />
 
                 <div className="relative z-10 w-full max-w-md">
                     {/* mobile brand */}
-                    <div className="lg:hidden flex items-center gap-3 mb-8 justify-center">
-                        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-moss-2 to-moss text-white font-display font-black text-xl">
+                    <div className="lg:hidden flex items-center gap-3 mb-10 justify-center">
+                        <div className="flex h-11 w-11 items-center justify-center bg-[#ccff00] text-[#0a0a0a] font-display font-black text-xl border-2 border-[#ccff00]">
                             F
                         </div>
                         <div className="leading-tight">
-                            <span className="font-display font-bold text-ink-text text-xl tracking-tight block">FMS</span>
-                            <span className="font-mono-label text-[9.5px] text-ink-2-text uppercase tracking-[0.22em]">Field Atlas</span>
+                            <span className="font-display font-black text-[#f5f0e8] text-xl tracking-tight block">FMS</span>
+                            <span className="font-mono-label text-[9px] text-[#6b6560] uppercase tracking-[0.28em]">Surveyor</span>
                         </div>
                     </div>
 
-                    <div className="fms-card px-9 py-9">
-                        <p className="font-mono-label text-[10.5px] text-moss-2 uppercase tracking-[0.24em]">
+                    <div className="fms-card p-8">
+                        <p className="font-mono-label text-[10px] text-[#ccff00] uppercase tracking-[0.28em] mb-2">
                             Authorized access
                         </p>
-                        <h2 className="mt-2 font-display font-semibold text-2xl text-ink-text tracking-tight">
+                        <h2 className="font-display font-black text-3xl text-[#f5f0e8] tracking-tight mb-1">
                             Welcome back
                         </h2>
-                        <p className="mt-1 text-sm text-ink-2-text">
+                        <p className="text-sm text-[#6b6560] mb-8">
                             Sign in with your registered credentials.
                         </p>
 
-                        <form onSubmit={handleSubmit} className="mt-7 space-y-5">
+                        <form onSubmit={handleSubmit} className="space-y-5">
                             <div>
-                                <label htmlFor="email" className="block text-[13px] font-semibold text-ink-text mb-1.5">
+                                <label htmlFor="email" className="block font-mono-label text-[10px] font-semibold text-[#9a938a] mb-2 uppercase tracking-[0.16em]">
                                     Email Address
                                 </label>
                                 <input
@@ -106,13 +106,13 @@ export default function Login() {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="you@example.com"
-                                    className="w-full border border-bone rounded-lg px-4 py-2.5 text-base focus:outline-none focus:border-moss focus:ring-2 focus:ring-moss/15 bg-ivory/50 transition placeholder:text-ink-2-text/50"
+                                    className="w-full border-2 border-[#2a2a2a] bg-[#0e0e0e] rounded-none px-4 py-3 text-[#f5f0e8] focus:outline-none focus:border-[#ccff00] transition-colors placeholder:text-[#3a3a3a] font-medium"
                                     required
                                     autoComplete="username"
                                 />
                             </div>
                             <div>
-                                <label htmlFor="password" className="block text-[13px] font-semibold text-ink-text mb-1.5">
+                                <label htmlFor="password" className="block font-mono-label text-[10px] font-semibold text-[#9a938a] mb-2 uppercase tracking-[0.16em]">
                                     Password
                                 </label>
                                 <input
@@ -121,20 +121,20 @@ export default function Login() {
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     placeholder="••••••••"
-                                    className="w-full border border-bone rounded-lg px-4 py-2.5 text-base focus:outline-none focus:border-moss focus:ring-2 focus:ring-moss/15 bg-ivory/50 transition placeholder:text-ink-2-text/50"
+                                    className="w-full border-2 border-[#2a2a2a] bg-[#0e0e0e] rounded-none px-4 py-3 text-[#f5f0e8] focus:outline-none focus:border-[#ccff00] transition-colors placeholder:text-[#3a3a3a] font-medium"
                                     required
                                     autoComplete="current-password"
                                 />
                             </div>
 
                             {error && (
-                                <p className="text-signal-2 text-sm text-center font-medium">{error}</p>
+                                <p className="text-[#ff4d4d] text-sm text-center font-medium">{error}</p>
                             )}
 
                             <button
                                 disabled={loginStatus === "loading"}
                                 type="submit"
-                                className={`w-full btn-fms justify-center text-base ${loginStatus === "loading" ? "opacity-60 cursor-wait" : ""}`}
+                                className={`w-full btn-fms justify-center text-base py-3 ${loginStatus === "loading" ? "opacity-40 cursor-wait" : ""}`}
                             >
                                 {loginStatus === "loading" ? (
                                     <>
@@ -150,15 +150,15 @@ export default function Login() {
                             </button>
                         </form>
 
-                        <p className="mt-6 text-sm text-ink-2-text text-center">
+                        <p className="mt-8 text-sm text-[#6b6560] text-center">
                             No account yet?{" "}
-                            <Link to="/StudentRegistration" className="font-semibold text-moss-2 hover:text-moss underline-offset-2 hover:underline">
+                            <Link to="/StudentRegistration" className="font-bold text-[#ccff00] hover:text-[#b8e600] transition-colors">
                                 Register here
                             </Link>
                         </p>
                     </div>
 
-                    <div className="mt-7 text-center font-mono-label text-[10.5px] text-ink-2-text/70 uppercase tracking-[0.18em]">
+                    <div className="mt-8 text-center font-mono-label text-[10px] text-[#3a3a3a] uppercase tracking-[0.2em]">
                         &copy; {new Date().getFullYear()} Field Management System
                     </div>
                 </div>

@@ -1,25 +1,34 @@
-/* Shared branded components for the Field Management System — Field Atlas palette */
+/* Shared branded components — Surveyor's Instrument dark mode */
 
 .settings-tabs .ant-tabs-nav {
     margin-bottom: 24px;
 }
 .settings-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
-    color: #0e8a86;
+    color: #ccff00;
     font-weight: 600;
 }
 .settings-tabs .ant-tabs-ink-bar {
-    background-color: #0e8a86;
+    background-color: #ccff00;
+}
+.settings-tabs .ant-tabs-tab {
+    color: #9a938a;
+}
+.settings-tabs .ant-tabs-tab:hover {
+    color: #f5f0e8;
 }
 
 /* Brand surface card */
 .brand-card {
-    background: #ffffff;
-    border: 1px solid #e5e9f0;
-    border-radius: 16px;
-    box-shadow: 0 1px 2px rgba(10, 20, 36, 0.04), 0 8px 24px -18px rgba(10, 20, 36, 0.25);
+    background: #141414;
+    border: 2px solid #2a2a2a;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+.brand-card:hover {
+    border-color: #3a3a3a;
 }
 .brand-card__header {
-    border-bottom: 1px solid #eef1f7;
+    border-bottom: 1px solid #2a2a2a;
     padding: 18px 22px;
 }
 .brand-card__body {
@@ -28,43 +37,44 @@
 
 /* Brand gradient header band */
 .brand-band {
-    background: linear-gradient(135deg, #0a1424 0%, #101c33 55%, #172a4e 130%);
-    color: #ffffff;
+    background: linear-gradient(135deg, #0a0a0a 0%, #141414 55%, #1e1e1e 130%);
+    color: #f5f0e8;
 }
 .brand-band--teal {
-    background: linear-gradient(135deg, #0a4b54 0%, #0e8a86 55%, #0fb5ae 130%);
+    background: linear-gradient(135deg, #1a2a00 0%, #2a4000 55%, #3a5500 130%);
 }
 
-/* Brand button */
+/* Brand button — chartreuse */
 .btn-brand {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, #0e8a86, #0fb5ae);
-    color: #ffffff;
+    background: #ccff00;
+    color: #0a0a0a;
     border: none;
-    border-radius: 10px;
+    border-radius: 2px;
     padding: 10px 18px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
+    letter-spacing: 0.02em;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
-    box-shadow: 0 8px 18px -10px rgba(15, 181, 174, 0.65);
+    transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.25s ease;
+    box-shadow: 0 12px 28px -10px rgba(204, 255, 0, 0.35);
 }
 .btn-brand:hover {
-    filter: brightness(1.05);
-    box-shadow: 0 12px 24px -10px rgba(15, 181, 174, 0.7);
+    background: #b8e600;
+    box-shadow: 0 16px 36px -10px rgba(204, 255, 0, 0.45);
 }
 .btn-brand:active {
     transform: translateY(1px);
 }
 .btn-brand--teal {
-    background: #0e8a86;
+    background: #b8e600;
 }
 .btn-brand--teal:hover {
-    background: #0a6770;
+    background: #a3cc00;
 }
 .btn-brand:disabled {
-    opacity: 0.5;
+    opacity: 0.4;
     cursor: not-allowed;
 }
