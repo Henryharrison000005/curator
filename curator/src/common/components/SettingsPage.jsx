@@ -261,9 +261,10 @@ function SettingsPage({
                 rules={[
                   { required: true, message: "Please enter phone number" },
                   { max: 14, message: "Phone number must be at most 14 characters" },
+                    { pattern: /^[0-9]+$/, message: "Phone number must contain numbers only" }
                 ]}
               >
-                <Input className="rounded-lg focus:border-[#c4622d]" />
+                <Input inputMode="numeric" className="rounded-lg focus:border-[#c4622d]" />
               </Form.Item>
 
               {showDepartment && (
