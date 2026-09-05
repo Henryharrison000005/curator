@@ -17,3 +17,11 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+dist/ 
+*/dist/ 
+.env 
+*/.env 
+*.log 
+**/storage/framework/views/* 
+**/bootstrap/cache/* 
+**/storage/logs/* 
