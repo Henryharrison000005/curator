@@ -1,27 +1,14 @@
-# Dependencies
+# Root monorepo ignores - supplements the inner ones
 node_modules/
-*/node_modules/
 vendor/
-*/vendor/
-
-# Builds
 dist/
 build/
-.next/
-
-# Env
 .env
-.env.local
-.env.backup
-
-# OS
+*.log
 .DS_Store
 Thumbs.db
-dist/ 
-*/dist/ 
-.env 
-*/.env 
-*.log 
-**/storage/framework/views/* 
-**/bootstrap/cache/* 
-**/storage/logs/* 
+
+# Laravel specific
+FSMS_BACKEND/storage/framework/views/
+FSMS_BACKEND/storage/logs/
+FSMS_BACKEND/bootstrap/cache/
